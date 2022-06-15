@@ -67,8 +67,8 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <counter>BRANCH</counter>
-                                            <value>COVERED COUNT</value>
+                                            <counter>COMPLEXITY</counter>
+                                            <value> COVERED COUNT</value>
                                             <minimum>100%</minimum>
                                         </limit>
                                     </limits>
