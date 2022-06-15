@@ -15,7 +15,7 @@ public class Main {
         repo.save(new Smartphone("Груша", 20, 500, "Яблочный Стив"));
         repo.save(new Smartphone("Игровая подстанция 5", 60, 300, "Кони"));
 
-        repo.removeById (505); //Удаление по id.
+        repo.removeById(505); //Удаление по id.
         Product[] all = repo.findAll();
     }
 }

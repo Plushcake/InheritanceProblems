@@ -9,7 +9,7 @@ class ProductManagerTest {
     Smartphone smartphone2 = new Smartphone("Игровая подстанция 5", 60, 300, "Кони");
 
     @Test
-    public void test1ShouldFindElements(){
+    public void test1ShouldFindElements() {
         ProductManager manager = new ProductManager();
         manager.add(book1);
         manager.add(book2);
@@ -21,8 +21,9 @@ class ProductManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void test2ShouldFindElements(){
+    public void test2ShouldFindElements() {
         ProductManager manager = new ProductManager();
         manager.add(book1);
         manager.add(book2);
@@ -36,7 +37,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void test3ShouldFindElements(){
+    public void test3ShouldFindElements() {
         ProductManager manager = new ProductManager();
         manager.add(book1);
         manager.add(book2);
@@ -50,7 +51,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void test4ShouldFindElements(){
+    public void test4ShouldFindElements() {
         ProductManager manager = new ProductManager();
         manager.add(book1);
         manager.add(book2);
