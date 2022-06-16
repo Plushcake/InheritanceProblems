@@ -71,5 +71,54 @@ class ProductRepositoryTest {
 
         assertArrayEquals(expected, actual);
     }
+    @Test
+    void test5ProductRepositoryRemove() {
+        ProductRepository repo = new ProductRepository();
+        repo.save(book1);
+        repo.save(book2);
+        repo.save(smartphone1);
+        repo.save(smartphone2);
+
+        repo.removeById(60);
+        repo.removeById(20);
+
+        Product[] actual = repo.findAll();
+        Product[] expected = {book1, book2};
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void test6ProductRepositoryRemove() {
+        ProductRepository repo = new ProductRepository();
+        repo.save(book1);
+        repo.save(book2);
+        repo.save(smartphone1);
+        repo.save(smartphone2);
+
+        repo.removeById(505);
+        repo.removeById(510);
+        repo.removeById(20);
+        repo.removeById(60);
+
+        Product[] actual = repo.findAll();
+        Product[] expected = {};
+
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void test7ProductRepositoryRemove() {
+        ProductRepository repo = new ProductRepository();
+        repo.save(book1);
+        repo.save(book2);
+        repo.save(smartphone1);
+        repo.save(smartphone2);
+
+
+        Product[] actual = repo.findAll();
+        Product[] expected = {book1, book2,smartphone1, smartphone2};
+
+        assertArrayEquals(expected, actual);
+    }
 
 }

@@ -64,4 +64,31 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void test5ShouldFindElements() {
+        ProductManager manager = new ProductManager();
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(smartphone1);
+        manager.add(smartphone2);
+
+        Product[] actual = manager.findByQuery("а");
+        Product[] expected = {book1, smartphone1, smartphone2};
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void test6ShouldFindElements() {
+        ProductManager manager = new ProductManager();
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(smartphone1);
+        manager.add(smartphone2);
+
+        Product[] actual = manager.findByQuery("яя");
+        Product[] expected = {};
+
+        assertArrayEquals(expected, actual);
+    }
 }
