@@ -1,3 +1,5 @@
+package ru.netology.domain;
+
 public class Product {
     protected String name; //Protected - Дает доступ всем из того же самого пакета + НАСЛЕДНИКАМ.
     protected int id;

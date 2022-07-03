@@ -1,3 +1,5 @@
+package ru.netology.domain;
+
 public class Book extends Product { // extends - Расширяет. Скопирует все с Product в Book.
 
     public String author;

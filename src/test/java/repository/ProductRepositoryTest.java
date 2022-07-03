@@ -1,3 +1,5 @@
+package repository;
+
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
