@@ -1,3 +1,6 @@
+import ru.netology.manager.ProductManager;
+import ru.netology.repository.ProductRepository;
+
 public class Main {
     public static void main(String[] args) {
 

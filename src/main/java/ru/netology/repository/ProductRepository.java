@@ -2,8 +2,8 @@ public class ProductRepository {
     private Product[] items = new Product[0];
 
     public void save(Product item) {
-        int lenght = items.length + 1;
-        Product[] tmp = new Product[lenght];
+        int length = items.length + 1;
+        Product[] tmp = new Product[length];
 
         System.arraycopy(items, 0, tmp, 0, items.length);
 
@@ -17,9 +17,13 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
+
+        if (findById(id) == null) {
+            throw new NotFoundException("Element with id: " + id + " not found");
+        }
         int lenght = items.length - 1;
         Product[] tmp = new Product[lenght];
-        int index = 0;
+        int index = 0;//Пожар пожар?
         for (Product item : items) {
             if (item.getId() != id) {
                 tmp[index] = item;
@@ -27,6 +31,15 @@ public class ProductRepository {
             }
         }
         items = tmp;
+    }
+
+    public Product findById(int id) {
+        for (Product item : items) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
     }
 
 }
